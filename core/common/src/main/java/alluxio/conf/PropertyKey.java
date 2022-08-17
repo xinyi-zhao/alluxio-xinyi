@@ -3602,6 +3602,20 @@ public final class PropertyKey implements Comparable<PropertyKey> {
           .setConsistencyCheckLevel(ConsistencyCheckLevel.WARN)
           .setScope(Scope.WORKER)
           .build();
+  public static final PropertyKey WORKER_BLOCK_ISOMETRIC_ANNOTATOR_DISTANCE =
+      intBuilder(Name.WORKER_BLOCK_ISOMETRIC_ANNOTATOR_DISTANCE)
+          .setDefaultValue(100)
+          .setDescription("The interval that we save the data in isometric strategy.")
+          .setConsistencyCheckLevel(ConsistencyCheckLevel.WARN)
+          .setScope(Scope.WORKER)
+          .build();
+  public static final PropertyKey WORKER_BLOCK_ISOMETRIC_ANNOTATOR_DROP_FACTOR =
+      doubleBuilder(Name.WORKER_BLOCK_ISOMETRIC_ANNOTATOR_DROP_FACTOR)
+          .setDefaultValue(0.0001)
+          .setDescription("Required times to go up a level for one block in isometric strategy.")
+          .setConsistencyCheckLevel(ConsistencyCheckLevel.WARN)
+          .setScope(Scope.WORKER)
+          .build();
   public static final PropertyKey WORKER_FUSE_ENABLED =
       booleanBuilder(Name.WORKER_FUSE_ENABLED)
           .setDefaultValue(false)
